@@ -18,8 +18,10 @@
 					class="sr-only">(current)</span></a></li>
 			<li class="nav-item"><a class="nav-link" href="${ entrada }CadastrarEmpresa">Cadastrar</a>
 			</li>
-			<li class="nav-item active"><a class="nav-link"
+			<li class="nav-item"><a class="nav-link"
 				href="${ entrada }ListarEmpresas">Listar</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="${ entrada }Logout">Sair</a></li>
 		</ul>
 	</div>
 </nav>

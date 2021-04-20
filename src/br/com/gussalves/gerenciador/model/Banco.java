@@ -12,6 +12,7 @@ import java.util.List;
 public class Banco {
 	
 	private static List<Empresa> listaEmpresas = new ArrayList<>();
+	private static List<Usuario> listaUsuario = new ArrayList<>();
 	private static Integer sequenciaId = 1;
 	
 	static {
@@ -26,6 +27,10 @@ public class Banco {
 		
 		Banco.listaEmpresas.addAll(Arrays.asList(empresa1, empresa2));
 		
+		Usuario usuario1 = new Usuario("gusta", "12345");
+		Usuario usuario2 = new Usuario("nath", "12345");
+		
+		Banco.listaUsuario.addAll(Arrays.asList(usuario1, usuario2));
 	}
 	
 	public void cadastrarEmpresa(Empresa empresa) {
@@ -59,6 +64,14 @@ public class Banco {
 				lista.remove();
 		}
 		
+	}
+	
+	public Usuario validarUsuario(String login, String senha) {
+		for ( Usuario usuario : listaUsuario ) {
+			if ( usuario.ehIgual(login, senha) )
+				return usuario;
+		}
+		return null;
 	}
 	
 }
